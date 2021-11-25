@@ -37,6 +37,7 @@ with st.sidebar:
     crime = movie3.button('Crime')
     adventure = movie3.button('Adventure')
     western = movie3.button('Western')
+    
     # Series
     expander_serie = st.expander("Series")
     raw_series = expander_serie.button("All series")
