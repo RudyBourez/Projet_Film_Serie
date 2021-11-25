@@ -103,5 +103,6 @@ elif western:
     data_sorted = search(data_sorted, "Western")
 if actors_films != "":
     data_sorted = search(data_sorted, actors_films=actors_films)
-
+if filtered_var!="":
+    data_sorted = search(data_sorted)
 container_search.write(data_sorted)
