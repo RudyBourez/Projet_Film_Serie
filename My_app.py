@@ -4,11 +4,8 @@ import pandas as pd
 @st.cache
 def load():
     data_films = pd.read_csv("films.csv")
-    data_series = pd.read_csv("serie.csv") 
+    data_series = pd.read_csv("series.csv") 
     return data_films, data_series
-def load_series():
-    data_series = pd.read_csv("serie.csv")
-    return data_series
 
 data_films, data_series = load()
 
@@ -79,7 +76,8 @@ def search(data_sorted, button, filtered_var, actors):
         data_sorted = data_sorted.loc[data_sorted["actors"].str.contains(f'{actors}')]
     return data_sorted, button    
 
-# Requests
+#----------------------------------Requests------------------------------------
+
 if raw_movies:
     data_sorted = data_films
 if buttons_films:
